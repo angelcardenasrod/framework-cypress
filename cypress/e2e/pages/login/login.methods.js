@@ -2,11 +2,12 @@ import { LoginElements } from "./login.elements";
 
 export class LoginMethods{
     static fillUsername (username) {
-        LoginElements.textBoxs.username.type(username);
+        LoginElements.textBoxs.username.invoke('val', username);
     }
 
+    //Usar invoke en vez de type para asegurar que indicamos bien los textos en los inputs.
     static fillPassword (pass) {
-        LoginElements.textBoxs.passeord.type(pass);
+        LoginElements.textBoxs.passeord.invoke('val', pass);
     }
 
     static clickButtonLogin () {
