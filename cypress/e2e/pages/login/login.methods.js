@@ -1,3 +1,9 @@
+/**
+ * @Class LoginMethods
+ * @description Class that returns the methods of our login page
+ * @author angelcardenasrod | Ángel Cárdenas Rodríguez
+ */
+
 import { LoginElements } from "./login.elements";
 
 export class LoginMethods{

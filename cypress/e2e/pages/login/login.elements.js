@@ -1,3 +1,9 @@
+/**
+ * @class LoginElements
+ * @description Class that returns the DOM elements of the login
+ * @author angelcardenasrod | Ángel Cárdenas Rodríguez
+ */
+
 export class LoginElements {
     static get textBoxs () {
         return {
