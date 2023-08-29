@@ -18,4 +18,8 @@ export class SignupMethods {
         this.fillPassword(pass);
         this.clickSignupButton();
     }
+
+    static VerifyMessageSuccessfullIsDisplay() {
+        cy.verifyMessageAlert('Sign up successful.');
+    }
 }

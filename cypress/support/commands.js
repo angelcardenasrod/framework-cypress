@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+/**
+ * @description Command to verify that the message passed by parameter is the same as the one displayed in the alert
+ * @param message
+ * @returns assertions if the message is correct
+ * @author angelcardenasrod | Ángel Cárdenas Rodríguez
+ */
+Cypress.Commands.add('verifyMessageAlert', (message) =>{
+    //Como verificar las alertas o mensajes pomps en Cypress
+    cy.on('window:alert', (str) =>{
+        expect(str).to.equal(message)
+    })
+})

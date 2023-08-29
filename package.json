@@ -6,7 +6,7 @@
   "scripts": {
     "generate-report": "allure generate allure-results -o allure-report --clean",
     "open-report": "allure open",
-    "run-tests": "cypress run --headed --env allure=true",
+    "run-tests": "cypress run --headed --env allure=true --browser chrome",
     "clean-report": "rimraf ./allure-report && rimraf ./allure-results",
     "test": "npm run clean-report && npm run run-tests & npm run generate-report && npm run open-report"
   },
