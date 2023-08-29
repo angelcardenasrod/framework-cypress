@@ -5,8 +5,9 @@ export class CommonData {
 
     static get testSuies () {
         return {
-           suite1: 'Sing Up & authentication',
-           suite2: 'Catalog & purchase'
+           suite1: 'Sing Up',
+           suite2: 'Authentication',
+           suite3: 'Catalog & purchase'
         }
     }
 }

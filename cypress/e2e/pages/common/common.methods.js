@@ -34,6 +34,12 @@ export class CommonMethods {
         CommonElements.topMenu.signUpLink.click();
     }
 
+    static verifyAlert (message) {
+        cy.on('window:alert', (str) =>{
+            expect(str).to.equal(message)
+        })
+    }
+
     static generateRandomString(length = 10) {
         let result = '';
         const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';

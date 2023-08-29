@@ -1,3 +1,4 @@
+import { CommonMethods } from "../common/common.methods";
 import { SignupElements } from "./singup.elements";
 
 export class SignupMethods {
@@ -20,6 +21,10 @@ export class SignupMethods {
     }
 
     static VerifyMessageSuccessfullIsDisplay() {
-        cy.verifyMessageAlert('Sign up successful.');
+        CommonMethods.verifyAlert('Sign up successful.');
+    }
+
+    static VerifiMessageFailUserIsDisplay() {
+        CommonMethods.verifyAlert('This user already exist.');
     }
 }
