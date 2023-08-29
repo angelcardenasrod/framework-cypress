@@ -17,6 +17,27 @@ describe(CommonData.testSuies.suite1, () =>{
         
         Logger.stepNumber(3);
         Logger.stepDescription('Fill all the input with correct info')
+        SignupMethods.fillUsername('user');
+        SignupMethods.fillPassword('pass');
+        Logger.stepNumber(4);
+        Logger.stepDescription('Click on Sign Up methods')
+        SignupMethods.clickSignupButton();
+        Logger.stepVerification('Verify that the "Sign up successful" message is displayed')
+        SignupMethods.VerifyMessageSuccessfullIsDisplay();
+
+    })
+
+   /* it('Sign up user - KO', () =>{
+        Logger.stepNumber(1);
+        Logger.stepDescription('Navigate to home page');
+        CommonMethods.navigateToDemoBlazeApp();
+       
+        Logger.stepNumber(2);
+        Logger.stepDescription('Click on Sign Up to top menu')
+        CommonMethods.clickSignUpLink();
+        
+        Logger.stepNumber(3);
+        Logger.stepDescription('Fill all the input with correct info')
         SignupMethods.fillUsername(user);
         SignupMethods.fillPassword(pass);
 
@@ -26,5 +47,5 @@ describe(CommonData.testSuies.suite1, () =>{
         Logger.stepVerification('Verify that the "Sign up successful" message is displayed')
         SignupMethods.VerifyMessageSuccessfullIsDisplay();
 
-    })
+    })*/
 })
