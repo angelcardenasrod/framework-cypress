@@ -30,4 +30,8 @@ export class CommonElements {
             },
         }
     }
+
+    static get signUser(){
+        return cy.xpath('//*[@id="nameofuser"]');
+    }
 }

@@ -52,6 +52,10 @@ export class CommonMethods {
         return result;
     }
 
+    static checkSignUserCorrect(username) {
+        CommonElements.signUser.and('have.text', `Welcome ${username}`);
+    }
+
 
 
 

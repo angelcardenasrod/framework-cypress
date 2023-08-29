@@ -4,8 +4,8 @@ const { CommonMethods } = require("../pages/common/common.methods");
 const { SignupMethods } = require("../pages/singUp/singup.methods");
 const user = CommonMethods.generateRandomString();
 const pass = CommonMethods.generateRandomString(7);
-const existUser = 'user';
-const existPass = 'pass';
+const existUser = LoginData.validCredentials.username;
+const existPass = LoginMethods.fillPassword( );
 
 describe(CommonData.testSuies.suite1, () =>{
     it('Sign up user - OK', () =>{
