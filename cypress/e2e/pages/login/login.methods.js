@@ -4,6 +4,7 @@
  * @author angelcardenasrod | Ángel Cárdenas Rodríguez
  */
 
+import { Logger } from "../../utilities/logger";
 import { LoginElements } from "./login.elements";
 
 export class LoginMethods{
@@ -25,8 +26,11 @@ export class LoginMethods{
     }
 
     static login (username, pass) {
+        Logger.subStep('Insert username')
         this.fillUsername(username);
+        Logger.subStep('Insert password')
         this.fillPassword(pass);
+        Logger.subStep('Click on log in button')
         this.clickButtonLogin();
     }
 }
