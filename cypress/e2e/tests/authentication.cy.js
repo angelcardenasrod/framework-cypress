@@ -24,6 +24,9 @@ describe(CommonData.testSuies.suite2, () => {
         LoginMethods.clickButtonLogin();
         Logger.stepVerification('Verify that the user is redirected to the home page');
         CommonMethods.checkSignUserCorrect(LoginData.validCredentials.username);
+
+        Logger.postCondition('LOG OUT');
+        CommonMethods.logOut();
     })
 
     it('Login - KO', ()=>{

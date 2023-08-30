@@ -57,7 +57,13 @@ export class CommonMethods {
         CommonElements.signUser.and('have.text', `Welcome ${username}`);
     }
 
-
-
+    static logOut(){
+        //Si encuentra el elemento, bien
+        cy.get('body').then($body=>{
+            if($body.find('#logout').length > 0){
+                CommonElements.topMenu.logOutLink.click();
+            }
+        })
+    }
 
 }
