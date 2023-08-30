@@ -13,6 +13,10 @@ export class CartElements {
         return {
             delete (nameProduct) {
                 return cy.xpath('//td[text()="'+nameProduct+'"]/ancestor::tr//a');
+            },
+
+            title (nameProduct) {
+                return cy.xpath('//td[text()="'+nameProduct+'"]');
             }
         }
     }

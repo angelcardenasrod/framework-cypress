@@ -19,7 +19,7 @@ export class CommonMethods {
         CommonElements.topMenu.aboutUsLink.click();
     }
     static clickCartLink() {
-        CommonElements.topMenu.clickCart.click();
+        CommonElements.topMenu.cartLink.click();
     }
 
     static clickLogInLink() {

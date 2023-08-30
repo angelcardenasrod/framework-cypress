@@ -13,7 +13,7 @@ export class CommonElements {
                 return cy.xpath('//*[@id="navbarExample"]//a[text()="About us"]')
             },
 
-            get aboutUsLink() {
+            get cartLink() {
                 return cy.xpath('//*[@id="navbarExample"]//a[text()="Cart"]')
             },
 
