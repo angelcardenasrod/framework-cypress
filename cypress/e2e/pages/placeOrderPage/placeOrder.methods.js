@@ -1,3 +1,4 @@
+import { Logger } from "../../utilities/logger";
 import { PlaceOrderElements } from "./placeOrder.elements";
 
 export class PlaceOrderMethods {
@@ -31,6 +32,22 @@ export class PlaceOrderMethods {
 
     static clickOnPurchase () {
         PlaceOrderElements.buttons.purchase.click();
+        cy.wait(2000);
+    }
+
+    static completeFormForPurchase(data) {
+        Logger.subStep('Fill name input')
+        this.fillName(data.name);
+        Logger.subStep('Fill country input')
+        this.fillCountry(data.country);
+        Logger.subStep('Fill city input')
+        this.fillCity(data.city);
+        Logger.subStep('Fill credit card number')
+        this.fillCreditCard(data.creditCard);
+        Logger.subStep('Fill month input')
+        this.fillMonth(data.month);
+        Logger.subStep('Fill year input')
+        this.fillYear(data.year);
     }
 
     

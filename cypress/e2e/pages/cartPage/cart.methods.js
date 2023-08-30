@@ -5,6 +5,10 @@ export class CartMethods {
         CartElements.links.delete(nameProduct).click();
     }
 
+    static clickOnPlaceOrder (){
+        CartElements.buttons.placeOrder.click();
+    }
+
     static verifyProductAdd (nameProduct) {
         CartElements.links.title(nameProduct).and('be.visible');
     }

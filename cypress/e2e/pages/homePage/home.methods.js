@@ -20,4 +20,8 @@ export class HomeMethods {
     static verifyProductIsDisplay(productName){
         HomeElements.product(productName).and('be.visible');
     }
+
+    static verifyHomePageIsShow() {
+        cy.url().and('include', 'index.html');
+    }
 }
