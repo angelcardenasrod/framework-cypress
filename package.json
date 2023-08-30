@@ -8,7 +8,8 @@
     "open-report": "allure open",
     "run-tests": "cypress run --headed --env allure=true --browser chrome",
     "clean-report": "rimraf ./allure-report && rimraf ./allure-results",
-    "test": "npm run clean-report && npm run run-tests & npm run generate-report && npm run open-report"
+    "test": "npm run clean-report && npm run run-tests & npm run generate-report && npm run open-report",
+    "cy:parallel": "npm run clean-report && cypress-parallel -s run-tests -t 2 -d ./cypress/e2e/tests & npm run generate-report"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
   "dependencies": {
     "@shelex/cypress-allure-plugin": "^2.39.1",
     "allure-commandline": "^2.23.1",
+    "cypress-parallel": "^0.13.0",
     "cypress-xpath": "^2.0.1"
   }
 }
