@@ -27,12 +27,15 @@ export class LoginMethods{
     }
 
     static login (username, pass) {
+        Logger.subStep('Click on Login link');
+        CommonMethods.clickLogInLink();
         Logger.subStep('Insert username')
         this.fillUsername(username);
         Logger.subStep('Insert password')
         this.fillPassword(pass);
         Logger.subStep('Click on log in button')
         this.clickButtonLogin();
+        cy.wait(2000);
     }
 
     static verifyWrongPasswordMessage() {
