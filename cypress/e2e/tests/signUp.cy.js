@@ -2,10 +2,11 @@ const { CommonData } = require("../pages/common/common.data");
 const { Logger } = require("../utilities/logger");
 const { CommonMethods } = require("../pages/common/common.methods");
 const { SignupMethods } = require("../pages/singUp/singup.methods");
+const { LoginData } = require("../pages/login/login.data");
 const user = CommonMethods.generateRandomString();
 const pass = CommonMethods.generateRandomString(7);
 const existUser = LoginData.validCredentials.username;
-const existPass = LoginMethods.fillPassword( );
+const existPass = LoginData.validCredentials.password;
 
 describe(CommonData.testSuies.suite1, () =>{
     it('Sign up user - OK', () =>{
