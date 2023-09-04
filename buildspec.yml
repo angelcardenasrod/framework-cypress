@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       nodejs: latest
-  pre-build:
+  pre¡_build:
     commands:
       - npm ci
   build:
