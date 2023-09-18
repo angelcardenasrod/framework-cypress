@@ -1,0 +1,34 @@
+{
+    "auth": {
+      "username": "angelcardenas_01mVNE",
+      "access_key": "zsyP8fm47zGVueC8rC73"
+    },
+    "browsers": [{
+        "browser": "chrome",
+        "os": "Windows 10",
+        "versions": ["latest", "latest - 1"]
+      },
+      {
+        "browser": "firefox",
+        "os": "OS X Mojave",
+        "versions": ["latest", "latest - 1"]
+      },
+      {
+        "browser": "edge",
+        "os": "OS X Catalina",
+        "versions": ["latest"]
+      }
+    ],
+    "run_settings": {
+      "cypress_config_file": "./cypress.config.js",
+      "npm_dependencies": {
+        "@shelex/cypress-allure-plugin": "^2.39.1",
+        "cypress-xpath": "^2.0.1"
+    },
+      "cypress_version": "12.13.0",
+      "project_name": "Cypress PoC browserstack",
+      "build_name": "PoC browserstack",
+      "parallels": 5,
+      "exclude": ["some-folder/test.js", "static/*.pdf"]
+    }
+  }
